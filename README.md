@@ -6,7 +6,7 @@ To run the project:
 AI Tools:
 - Grok
 
-I used Grok for the main setup: The store and the services file, since I didn't remember very much how to do it from scratch.
+I used Grok for the main setup and the general scaffold: The store and the services file, since I didn't remember very much how to do it from scratch.
 
 What would I have done better with a real app and more time:
 
