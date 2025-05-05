@@ -1,9 +1,12 @@
 <template>
   <main>
-    <CurrentFunds></CurrentFunds>
-    <AddFunds></AddFunds>
-    <WithDrawFunds></WithDrawFunds>
-    <SendMoney></SendMoney>
+    <div class="container" v-if="isLoggedIn">
+      <CurrentFunds></CurrentFunds>
+      <AddFunds></AddFunds>
+      <WithDrawFunds></WithDrawFunds>
+      <SendMoney></SendMoney>
+    </div>
+    <h2 v-else>Welcome!</h2>
   </main>
 </template>
 <script setup>
@@ -14,5 +17,9 @@ import AddFunds from '../components/AddFunds.vue';
 import WithDrawFunds from '../components/WithdrawFunds.vue';
 import SendMoney from '../components/SendMoney.vue';
 
+import { useUserStore } from '@/stores/userStore';
 
+const userStore = useUserStore();
+
+const isLoggedIn = computed( () => userStore.isLoggedIn)
 </script>
