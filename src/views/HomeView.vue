@@ -17,8 +17,6 @@ import AddFunds from '../components/AddFunds.vue';
 import WithDrawFunds from '../components/WithdrawFunds.vue';
 import SendMoney from '../components/SendMoney.vue';
 
-import { useUserStore } from '@/stores/userStore';
-
 const userStore = useUserStore();
 
 const isLoggedIn = computed( () => userStore.isLoggedIn)
